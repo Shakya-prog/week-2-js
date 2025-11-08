@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <div class="todo-container">
+    <h1>My Daily To-Do List</h1>
+
+    <div class="input-section">
+      <input id="taskInput" type="text" placeholder="Add a new task..." />
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="actions">
+      <button id="markAllBtn">Mark All</button>
+      <button id="unmarkAllBtn">Unmark All</button>
+      <button id="deleteAllBtn" class="danger">Delete Tasks</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <div id="deletePrompt" class="modal">
+    <div class="modal-content">
+      <h3>Delete Tasks</h3>
+      <p>What do you want to delete?</p>
+      <div class="modal-buttons">
+        <button id="deleteCompletedBtn" class="danger">Delete Completed</button>
+        <button id="deleteAllConfirmBtn" class="danger">Delete All</button>
+        <button id="cancelDeleteBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
